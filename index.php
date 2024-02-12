@@ -41,26 +41,23 @@ body::before {
 </style>
 </head>
 <body>
-  <script type="text/javascript">
+ <script type="text/javascript">
    var beardedBoo = function() {
 		var body = $('body'),
 		    image = $("#image");
 		body.removeClass("no").removeClass("maybe")
 		image.removeClass("benefits").removeClass("certificate")
 		var answer = prompt("Will you be my valentine Bebekes Labikes? Oo, Hindi, Ewan? Umoo Ka!").toLowerCase()
-/* .toLowerCase IS BEST PRACTICE! IT'S ALSO OK IF YOU TYPE THE FIRST LETTER INSTEAD OF THE WORD! */
 		if (answer == "Oo" || answer == 'oo') {
 			body.addClass("Oo")
 			image.addClass("certificate")
 		} else if (answer == "Ewan" || answer == 'ewan') {
 			body.addClass("maybe")
-/* I WANTED THE BG TO CHANGE BEFORE THE ALERT AND THE IMAGE AFTER THE PROMPT AND THE NEXT PROMPT AFTER THAT! I LEARNED THAT IF ALERT AD IMAGE ARE NOT IN THE setTimeout TOGETHER, IT DOES THEM AT THE SAME TIME. */
 			setTimeout(beardedBoo, 6000)
 			setTimeout(function() {
 				alert("Perhaps you are not aware of the many benefits")
 				image.addClass("benefits")
 			}, 200)
-/* HEY!!! */
 		} else {
 			body.addClass("hindi")
 			setTimeout(function() {
@@ -70,7 +67,7 @@ body::before {
 		}
 	}
     setTimeout(beardedBoo, 300)
-/* ALL THESE ALERTS/PROMPTS COULD GET ANNOYING, IT'S BEST TO JUST BE MY VALENTINE */
+
   </script>
   <div id="image"></div>
 </body>
